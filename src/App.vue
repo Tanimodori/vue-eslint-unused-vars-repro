@@ -2,7 +2,7 @@
 import HelloWorld from "./components/HelloWorld.vue";
 import TheWelcome from "./components/TheWelcome.vue";
 // 'Foo' is defined but never used. (eslint@typescript-eslint/no-unused-vars)
-import type { Foo } from "./types";
+import type { Foo, Bar } from "./types";
 </script>
 
 <template>
@@ -18,7 +18,7 @@ import type { Foo } from "./types";
     <div class="wrapper">
       <HelloWorld msg="You did it!">
         <template #default="{ foo }: Foo">
-          <p>Foo: {{ foo }}</p>
+          <p>Foo: {{ foo as Bar }}</p>
         </template>
       </HelloWorld>
     </div>
