@@ -2,7 +2,11 @@
 import HelloWorld from "./components/HelloWorld.vue";
 import TheWelcome from "./components/TheWelcome.vue";
 // 'Foo' is defined but never used. (eslint@typescript-eslint/no-unused-vars)
-import type { Foo, Bar } from "./types";
+interface Foo {
+  foo: string;
+}
+// 'Bar' is defined but never used. (eslint@typescript-eslint/no-unused-vars)
+type Bar = string;
 </script>
 
 <template>
